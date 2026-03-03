@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 const skillCategories = [
   {
     category: "Languages",
-    skills: ["Python", "HTML", "CSS", "SQL"],
+    skills: ["Python", "HTML", "CSS", "SQL", "ML"],
   },
   {
     category: "AI / ML",
-    skills: ["LangChain", "OpenAI", "Q-Learning", "Reinforcement Learning", "NLP", "Contextual Bandits"],
+    skills: ["LangChain", "OpenAI", "Q-Learning", "Reinforcement Learning", "NLP", "Agentic AI", "LoRA", "Vectorization", "RAG"],
   },
   {
     category: "Frameworks & Tools",
@@ -15,7 +15,7 @@ const skillCategories = [
   },
   {
     category: "Concepts",
-    skills: ["Incentive Design", "Probabilistic Models", "Pathfinding Algorithms", "Prompt Engineering"],
+    skills: ["Incentive Design", "Probabilistic Models", "Pathfinding Algorithms", "Prompt Engineering", "Interpretability", "Explainability", "GAM", "CBM", "WebLLM", "WebGPU"],
   },
 ];
 
