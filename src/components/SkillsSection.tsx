@@ -15,7 +15,7 @@ const skillCategories = [
   },
   {
     category: "Concepts",
-    skills: ["Incentive Design", "Probabilistic Models", "Pathfinding Algorithms", "Prompt Engineering", "Interpretability", "Explainability", "GAM", "CBM", "WebLLM", "WebGPU"],
+    skills: ["Incentive Design", "Prompt Engineering", "Interpretability", "Explainability", "GAM", "CBM", "WebLLM", "WebGPU", "Workflows", "Agents", "Guardrails"],
   },
 ];
 
