@@ -3,6 +3,12 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "Shadow Board – Multi-Agent AI Decision System",
+    description:
+      "Architecting a multi-agent AI system with specialized AI Agents (CFO, CMO, Legal, Devil's Advocate) that independently research via API-based tool integrations and engage in structured real-time agentic workflows with evaluation checkpoints. Engineered prompt engineering strategies and prompt robustness testing for distinct agent personas, optimizing response quality, safety guardrails, and inter-agent collaboration using LangChain and LangGraph orchestration. Designed evaluation harnesses and benchmarking pipelines.",
+    tags: ["Python", "LangChain", "LangGraph", "CrewAI", "MCP", "REST APIs"],
+  },
+  {
     title: "Designing Incentives for AI Agents",
     description:
       "Research project studying how incentive designs affect AI agent behavior using contextual bandits, Q-learning, and proper scoring rules (Brier score). Evaluates accuracy vs. speed trade-offs and confidence calibration under stationary and non-stationary environments.",
