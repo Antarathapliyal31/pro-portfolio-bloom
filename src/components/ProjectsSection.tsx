@@ -3,6 +3,12 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "Abilify Clinical Q&A Agent",
+    description:
+      "Built a multi-agent clinical Q&A system on Abilify's FDA label. Implemented agentic RAG with LangGraph orchestration, AWS S3 for storing documents used for retrieval, hybrid search retrieval, PubMed MCP integration, and an autonomous evaluation agent that quality-checks every answer before delivery. Traced and debugged the entire pipeline using LangFuse, which revealed critical issues invisible to print statements.",
+    tags: ["Python", "LangGraph", "Agentic RAG", "AWS S3", "PubMed MCP", "LangFuse"],
+  },
+  {
     title: "Shadow Board – Multi-Agent AI Decision System",
     description:
       "Architecting a multi-agent AI executive decision system with 5 specialized AI agents (CFO, CMO, Legal Counsel, Devil's Advocate, Moderator) that independently research via real-time web search APIs and engage in structured 3-round debates with context-chained reasoning, where each agent reads and directly challenges other agents' arguments. Built with CrewAI for agent orchestration, Gemini API for reasoning, and FastAPI with Server-Sent Events (SSE) for real-time per-agent streaming to a React frontend. Implemented human-in-the-loop decision points with targeted agent questioning, dynamic PDF strategy brief generation, Slack notifications for cross-platform workflows, file upload for document-grounded analysis, and industry-specific board presets. Enabled CrewAI execution tracing for full observability of agent decision-making and tool usage.",
