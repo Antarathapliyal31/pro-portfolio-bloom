@@ -13,12 +13,10 @@ const education = [
       "Currently Exploring: LangChain, OpenAI, Vector Databases",
     ],
     courses: [
-      "Data Structures & Algorithms (A)",
-      "Artificial Intelligence (A)",
-      "Database Systems for Data Science (A)",
-      "Topics in AI (A)",
-      "Machine Learning (A)",
-      "Computers in Biomedicine (A)",
+      "Topics in AI",
+      "Introduction to AI",
+      "Seminar in CS — Interpretability and Explainability",
+      "Machine Learning",
     ],
   },
   {
