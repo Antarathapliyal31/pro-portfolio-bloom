@@ -5,7 +5,7 @@ const highlights = [
   {
     icon: Brain,
     title: "AI & Machine Learning",
-    description: "Designing incentive-compatible AI agents using contextual bandits and Q-learning frameworks.",
+    description: "Designing AI agents, understanding A2A, MCP protocols and RAG pipelines.",
   },
   {
     icon: Code,
