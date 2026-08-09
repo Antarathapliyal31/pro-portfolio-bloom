@@ -27,8 +27,7 @@ const HeroSection = () => {
             Thapliyal
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            Building intelligent systems with Python, Machine Learning, and AI Agents.
-            Passionate about designing incentive-compatible AI and solving real-world problems through code.
+            I design and build intelligent systems—AI agents, automation, and the platform plumbing around them, using Python, AWS, and modern CI/CD practices. Grounded, production-minded engineering over flashy demos.
           </p>
 
           <div className="flex items-center justify-center gap-4 mb-12">
