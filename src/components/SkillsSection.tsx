@@ -11,7 +11,7 @@ const skillCategories = [
   },
   {
     category: "Frameworks & Tools",
-    skills: ["Streamlit", "Git", "GitHub", "VS Code", "Jupyter"],
+    skills: ["Streamlit", "Git", "GitHub", "VS Code", "Jupyter", "AWS Bedrock", "AWS AgentCore", "AWS S3", "Docker", "EC2", "EKS", "ADO", "SDLC"],
   },
   {
     category: "Concepts",
