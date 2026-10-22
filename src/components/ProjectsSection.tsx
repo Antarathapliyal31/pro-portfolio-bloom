@@ -3,6 +3,13 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "Flashcards from PDF",
+    description:
+      "Turns a PDF (lecture, chapter, paper, or slide deck) into flashcards, a prose summary, or key-point bullets, each with page-level citations. Built on Claude Code Skills, Hooks, and standalone Python agents. Three pipelines — make-flashcards, make-summary, and key-points — follow extract → generate → evaluate. Every output is checked by Python (format, citation presence, cited-page validity, length caps, and page coverage) plus one LLM faithfulness and coverage evaluation, and a Stop hook enforces that every generated file gets an evaluation report.",
+    tags: ["Python", "Claude Code", "Claude API", "Skills", "Hooks", "LLM evaluation"],
+    github: "https://github.com/Antarathapliyal31/flashcards_from_pdf",
+  },
+  {
     title: "Abilify Clinical Q&A Agent",
     description:
       "Built a multi-agent clinical Q&A system on Abilify's FDA label. Implemented agentic RAG with LangGraph orchestration, AWS S3 for storing documents used for retrieval, hybrid search retrieval, PubMed MCP integration, and an autonomous evaluation agent that quality-checks every answer before delivery. Traced and debugged the entire pipeline using LangFuse, which revealed critical issues invisible to print statements.",

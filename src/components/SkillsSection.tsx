@@ -10,8 +10,12 @@ const skillCategories = [
     skills: ["LangChain", "OpenAI", "Q-Learning", "Reinforcement Learning", "NLP", "Agentic AI", "LoRA", "Vectorization", "RAG"],
   },
   {
+    category: "AI Agents & Tooling",
+    skills: ["Claude Code", "Claude API", "Claude Skills", "Claude Code Hooks", "Golden Datasets (LLM evaluation)"],
+  },
+  {
     category: "Frameworks & Tools",
-    skills: ["Streamlit", "Git", "GitHub", "VS Code", "Jupyter", "AWS Bedrock", "AWS AgentCore", "AWS S3", "Docker", "EC2", "EKS", "ADO", "SDLC"],
+    skills: ["Streamlit", "Git", "GitHub", "GitHub Actions", "VS Code", "Jupyter", "AWS Bedrock", "AWS AgentCore", "AWS S3", "Docker", "EC2", "EKS", "ADO", "SDLC"],
   },
   {
     category: "Concepts",
