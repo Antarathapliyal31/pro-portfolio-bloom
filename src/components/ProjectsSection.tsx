@@ -10,16 +10,22 @@ const projects = [
     github: "https://github.com/Antarathapliyal31/flashcards_from_pdf",
   },
   {
+    title: "Open Knowledge Format (OKF)",
+    description:
+      "Modeled a synthetic insurance PostgreSQL database into a semantic layer of documented knowledge bundles — entities, join keys, metric definitions, and playbooks — so a Claude agent answers business questions with correct queries instead of guessing.",
+    tags: ["Python", "PostgreSQL", "Claude"],
+  },
+  {
     title: "Abilify Clinical Q&A Agent",
     description:
-      "Built a multi-agent clinical Q&A system on Abilify's FDA label. Implemented agentic RAG with LangGraph orchestration, AWS S3 for storing documents used for retrieval, hybrid search retrieval, PubMed MCP integration, and an autonomous evaluation agent that quality-checks every answer before delivery. Traced and debugged the entire pipeline using LangFuse, which revealed critical issues invisible to print statements.",
-    tags: ["Python", "LangGraph", "Agentic RAG", "AWS S3", "PubMed MCP", "LangFuse"],
+      "Multi-agent RAG system for a high-stakes domain. Parent-child chunking lifted retrieval accuracy 40%, and Cohere reranking raised answer relevancy 30%. An evaluation agent (LLM-as-judge, RAGAS) detects regressions, with hallucination and PII guardrails and LangFuse observability.",
+    tags: ["Python", "LangGraph", "MCP", "LangFuse", "RAGAS", "Claude", "Chroma"],
   },
   {
     title: "Shadow Board – Multi-Agent AI Decision System",
     description:
-      "Architecting a multi-agent AI executive decision system with 5 specialized AI agents (CFO, CMO, Legal Counsel, Devil's Advocate, Moderator) that independently research via real-time web search APIs and engage in structured 3-round debates with context-chained reasoning, where each agent reads and directly challenges other agents' arguments. Built with CrewAI for agent orchestration, Gemini API for reasoning, and FastAPI with Server-Sent Events (SSE) for real-time per-agent streaming to a React frontend. Implemented human-in-the-loop decision points with targeted agent questioning, dynamic PDF strategy brief generation, Slack notifications for cross-platform workflows, file upload for document-grounded analysis, and industry-specific board presets. Enabled CrewAI execution tracing for full observability of agent decision-making and tool usage.",
-    tags: ["Python", "CrewAI", "Gemini API", "FastAPI", "React", "SSE", "Slack API", "AIRIA"],
+      "A 5-agent decision simulation with MCP integration and per-agent context pruning (4s TTFT). Structured outputs, guardrails, and evaluation checkpoints sit behind a documented FastAPI layer.",
+    tags: ["Python", "CrewAI", "MCP", "FastAPI"],
   },
   {
     title: "Designing Incentives for AI Agents",
@@ -97,14 +103,16 @@ const ProjectsSection = () => {
                 <h3 className="text-lg font-semibold group-hover:text-secondary transition-colors pr-4">
                   {project.title}
                 </h3>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors shrink-0"
-                >
-                  <Github size={20} />
-                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors shrink-0"
+                  >
+                    <Github size={20} />
+                  </a>
+                )}
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed mb-5">
                 {project.description}

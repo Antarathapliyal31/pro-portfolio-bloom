@@ -18,7 +18,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <p className="text-sm font-mono text-primary tracking-widest uppercase mb-4">
-            AI & ML Enthusiast
+            Engineer
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
             Hi, I'm{" "}
@@ -27,7 +27,7 @@ const HeroSection = () => {
             Thapliyal
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            I design and build intelligent systems—AI agents, automation, and the platform plumbing around them, using Python, AWS, and modern CI/CD practices. Grounded, production-minded engineering over flashy demos.
+            I work directly with people to understand messy, real problems and ship them end to end: data integration and modeling, backend services, and AI agents. I love getting answers — and until I have them, I keep striving to find them.
           </p>
 
           <div className="flex items-center justify-center gap-4 mb-12">

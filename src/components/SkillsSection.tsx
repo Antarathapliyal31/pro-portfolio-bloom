@@ -3,23 +3,69 @@ import { motion } from "framer-motion";
 const skillCategories = [
   {
     category: "Languages",
-    skills: ["Python", "HTML", "CSS", "SQL", "ML"],
+    skills: ["Python", "FastAPI", "Pydantic", "pytest", "SQL", "JavaScript", "HTML/CSS"],
   },
   {
-    category: "AI / ML",
-    skills: ["LangChain", "OpenAI", "Q-Learning", "Reinforcement Learning", "NLP", "Agentic AI", "LoRA", "Vectorization", "RAG"],
+    category: "Data Integration & Modeling",
+    skills: [
+      "PostgreSQL",
+      "Relational Data Modeling",
+      "Data Pipelines",
+      "Schema Mapping & Normalization",
+      "Semantic Layers",
+      "Knowledge Bundles",
+    ],
   },
   {
-    category: "AI Agents & Tooling",
-    skills: ["Claude Code", "Claude API", "Claude Skills", "Claude Code Hooks", "Golden Datasets (LLM evaluation)"],
+    category: "AI & Agents",
+    skills: [
+      "LangGraph",
+      "LangChain",
+      "CrewAI",
+      "Tool Use",
+      "MCP Servers",
+      "RAG",
+      "FAISS",
+      "Chroma",
+      "LLM-as-judge",
+      "RAGAS",
+      "Guardrails",
+      "Claude on AWS Bedrock",
+      "Claude API",
+      "Golden Datasets",
+    ],
   },
   {
-    category: "Frameworks & Tools",
-    skills: ["Streamlit", "Git", "GitHub", "GitHub Actions", "VS Code", "Jupyter", "AWS Bedrock", "AWS AgentCore", "AWS S3", "Docker", "EC2", "EKS", "ADO", "SDLC"],
+    category: "Integrations & Delivery",
+    skills: [
+      "REST API Integrations",
+      "Auth, Retries & Rate Limiting",
+      "Batch Jobs",
+      "CLIs & Internal Tools",
+      "Testing & Debugging",
+      "Technical Documentation",
+      "Git",
+    ],
   },
   {
-    category: "Concepts",
-    skills: ["Incentive Design", "Prompt Engineering", "Interpretability", "Explainability", "GAM", "CBM", "WebLLM", "WebGPU", "Workflows", "Agents", "Guardrails"],
+    category: "Cloud & Delivery",
+    skills: [
+      "AWS Bedrock",
+      "Lambda",
+      "S3",
+      "CloudWatch",
+      "IAM",
+      "Cross-Account Access",
+      "Docker",
+      "CI/CD",
+      "Azure DevOps",
+      "GitHub Actions",
+      "Streamlit",
+    ],
+  },
+  {
+    category: "AI-Assisted Development",
+    skills: ["Claude Code", "Claude Skills", "Claude Code Hooks", "Cursor", "GitHub Copilot"],
   },
 ];
 
@@ -40,7 +86,7 @@ const SkillsSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {skillCategories.map((cat, i) => (
             <motion.div
               key={cat.category}
@@ -48,9 +94,9 @@ const SkillsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="glass-card rounded-xl p-8"
+              className="glass-card rounded-xl p-8 h-full"
             >
-              <h3 className="text-sm font-mono text-secondary uppercase tracking-wider mb-5">
+              <h3 className="text-sm font-mono text-secondary uppercase tracking-wider mb-5 leading-relaxed">
                 {cat.category}
               </h3>
               <div className="flex flex-wrap gap-2">

@@ -5,12 +5,14 @@ const highlights = [
   {
     icon: Brain,
     title: "AI & Machine Learning",
-    description: "Designing AI agents, understanding A2A, MCP protocols and RAG pipelines.",
+    description:
+      "Designing AI agentic systems, understanding A2A, MCP protocols, RAG pipelines, semantic layers (bundles), guardrails, evaluations, golden datasets, and observability.",
   },
   {
     icon: Code,
     title: "Python Development",
-    description: "Building robust applications with Python, LangChain, Streamlit, and OpenAI integrations.",
+    description:
+      "Building robust applications with Python, agentic frameworks (LangGraph, CrewAI, LangChain), Claude Skills, Hooks, and Claude API integrations.",
   },
   {
     icon: Bot,

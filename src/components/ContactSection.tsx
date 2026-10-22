@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, FileText, Mail, Send } from "lucide-react";
+import { Github, Linkedin, FileText, Mail, MapPin, Phone, Send } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -126,11 +126,23 @@ const ContactSection = () => {
           >
             <div className="glass-card rounded-xl p-6">
               <h3 className="font-semibold mb-4">Get in Touch</h3>
-              <div className="flex items-center gap-3 mb-3">
-                <Mail size={16} className="text-primary" />
-                <a href="mailto:thapliyalantara31@gmail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  thapliyalantara31@gmail.com
-                </a>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <Mail size={16} className="text-primary shrink-0" />
+                  <a href="mailto:thapliyalantara31@gmail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    thapliyalantara31@gmail.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Phone size={16} className="text-primary shrink-0" />
+                  <a href="tel:6402253875" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    640-225-3875
+                  </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <MapPin size={16} className="text-primary shrink-0" />
+                  <span className="text-sm text-muted-foreground">Hamilton, NJ</span>
+                </div>
               </div>
             </div>
 

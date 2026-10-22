@@ -1,35 +1,34 @@
 import { motion } from "framer-motion";
-import { GraduationCap, BookOpen, Award, Users } from "lucide-react";
+import { GraduationCap, BookOpen, Award } from "lucide-react";
 
 const education = [
   {
-    university: "Rutgers University–New Brunswick",
-    degree: "Master of Science — Computer Science",
-    period: "Jan 2025 – Dec 2026",
+    university: "Rutgers University, New Brunswick",
+    degree: "Master of Science in Computer Science",
+    period: "Expected Dec 2026",
     gpa: "4.0",
-    highlights: [
-      "Currently working on a research paper; looking forward to publishing it.",
-      "Skills: Mechanism Design, RLHF, Policy Optimization, Reward Designing",
-      "Currently Exploring: LangChain, OpenAI, Vector Databases",
-    ],
-    courses: [
-      "Topics in AI",
-      "Introduction to AI",
-      "Seminar in CS — Interpretability and Explainability",
-      "Machine Learning",
-    ],
-  },
-  {
-    university: "G. B. Pant University Of Agriculture & Technology",
-    degree: "Bachelor of Technology — Information Technology",
-    period: "2017 – 2021",
-    gpa: "3.36",
-    highlights: [
-      "Alumni Cell: Organized 'SAMANVAY' reunion event; led 'Photoholic' — awarded best event two years running.",
-      "Astitva NGO: Taught underprivileged children three days a week; provided social education and basic necessities.",
-    ],
+    highlights: [],
     courses: [],
   },
+  {
+    university: "G.B. Pant University of Agriculture & Technology",
+    degree: "Bachelor of Technology in Information Technology",
+    period: "Jun 2021",
+    highlights: [],
+    courses: [],
+  },
+];
+
+const certifications = [
+  "Supervised Machine Learning",
+  "Introduction to Model Context Protocol",
+  "Claude Code in Action",
+  "Building with the Claude API",
+];
+
+const activities = [
+  "Women Who Code Leadership Summit 2026, Emcee Team",
+  "Astitva NGO Volunteer Educator (2+ years)",
 ];
 
 const EducationSection = () => {
@@ -82,10 +81,12 @@ const EducationSection = () => {
                 <h3 className="text-lg font-semibold mb-1">{edu.university}</h3>
                 <p className="text-sm text-muted-foreground mb-3">{edu.degree}</p>
 
-                <div className={`flex items-center gap-1 mb-4 ${i % 2 === 0 ? "md:justify-end" : ""}`}>
-                  <Award size={14} className="text-secondary" />
-                  <span className="text-sm font-medium">GPA: {edu.gpa}</span>
-                </div>
+                {edu.gpa && (
+                  <div className={`flex items-center gap-1 mb-4 ${i % 2 === 0 ? "md:justify-end" : ""}`}>
+                    <Award size={14} className="text-secondary" />
+                    <span className="text-sm font-medium">GPA: {edu.gpa}</span>
+                  </div>
+                )}
 
                 {edu.highlights.map((h, j) => (
                   <p key={j} className="text-xs text-muted-foreground mb-1.5 leading-relaxed">
@@ -114,6 +115,47 @@ const EducationSection = () => {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="glass-card rounded-xl p-6"
+          >
+            <div className="flex items-center gap-2 mb-4">
+              <Award size={18} className="text-primary" />
+              <h3 className="text-sm font-mono text-secondary uppercase tracking-wider">Certifications</h3>
+            </div>
+            <ul className="space-y-2">
+              {certifications.map((item) => (
+                <li key={item} className="text-sm text-muted-foreground leading-relaxed">
+                  • {item}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="glass-card rounded-xl p-6"
+          >
+            <div className="flex items-center gap-2 mb-4">
+              <BookOpen size={18} className="text-primary" />
+              <h3 className="text-sm font-mono text-secondary uppercase tracking-wider">Activities</h3>
+            </div>
+            <ul className="space-y-2">
+              {activities.map((item) => (
+                <li key={item} className="text-sm text-muted-foreground leading-relaxed">
+                  • {item}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
         </div>
       </div>
     </section>

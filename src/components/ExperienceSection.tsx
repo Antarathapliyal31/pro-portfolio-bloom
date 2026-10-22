@@ -5,14 +5,30 @@ const experiences = [
   {
     company: "Otsuka Pharmaceutical",
     location: "Princeton, NJ",
-    role: "GenAI Engineer Intern",
+    role: "GenAI Engineer Intern – Gen AI Platform Team, AI-Enablement Org",
     period: "Jun 2026 – Aug 2026",
     highlights: [
-      "Built and shipped a Code Review Agent end-to-end using the internal skAI SDK pattern; fetches a target agent's codebase from Azure DevOps at runtime via REST API and reviews across three lenses: security (bandit), code quality (ruff), and skAI-compliance (Python AST), and lets each team supply its own review spec of custom checks; returns a risk-rated verdict, deployed to dev via the ADO CI/CD pipeline.",
-      "Developed a model-lifecycle agent in Python that tracks AWS Bedrock (Claude) model EOL/legacy dates via boto3, applies tiered expiring-soon alerting, and emails managers on a scheduled run, surfaced through a Streamlit dashboard, reducing spend on deprecated or unused models against a per-user cost budget.",
-      "Engineered a multi-turn CLI to invoke and interactively converse with agents on the platform, streamlining agent testing and iteration.",
-      "Worked closely with the platform team on the internal skAI SDK and across the platform architecture: agents on AWS Bedrock AgentCore (registry, memory, gateway), agent code versioned in Azure DevOps, and CloudWatch monitoring.",
-      "Executed manual UAT for the skAI platform as an Agent Consumer, identifying environment-readiness blockers and documenting them for the platform team to resolve.",
+      "At Otsuka Pharmaceutical, I built a Code Review Agent that checks AI agents before they reach production: Bandit, Ruff and a custom AST checker find security, quality and SDK-compliance issues, and a sandbox run catches runtime errors. Claude on AWS Bedrock then turns the findings into a risk-rated report citing the exact file and line, and a human approves or denies the release. I validated it on a golden dataset, where it caught 100% of known issues, and shipped it through CI/CD.",
+      "Upgraded the platform's agent CLI from one-shot to multi-turn and built MCP-accessible tools so anyone in the company could use agents easily; diagnosed and fixed cross-account AWS invocation failures blocking deployment.",
+      "Built a model-lifecycle agent that pulls end-of-life dates directly from the AWS Bedrock API, applies tiered CRITICAL/WARNING alerting, emails managers on a schedule, and surfaces risk on a Streamlit dashboard.",
+    ],
+  },
+  {
+    company: "Tata Consultancy Services (TCS)",
+    role: "Software Engineer – Client Delivery, Insurance Client",
+    period: "Jul 2021 – Jun 2023",
+    highlights: [
+      "Delivered production systems for an insurance carrier in a regulated environment: built new insurance products and batch letter-generation flows for policy activation and annual renewals, with error handling, retries, and data contracts across third-party integrations.",
+      "Worked directly with client stakeholders to turn requirements into build plans and automated data pipelines in Python and SQL with monitoring; guided junior team members; drove a 29% lift in sales and 30% reduction in manual effort.",
+    ],
+  },
+  {
+    company: "Rutgers University",
+    location: "New Brunswick, NJ",
+    role: "Instructor, CS110 & CS170",
+    period: "Sep 2025 – Present",
+    highlights: [
+      "Teach Python, web technologies, and data analysis to 80+ students per semester, many from non-technical backgrounds.",
     ],
   },
 ];
@@ -56,10 +72,12 @@ const ExperienceSection = () => {
                       <Calendar size={14} className="text-primary" />
                       {exp.period}
                     </span>
-                    <span className="flex items-center gap-1">
-                      <MapPin size={14} className="text-primary" />
-                      {exp.location}
-                    </span>
+                    {exp.location && (
+                      <span className="flex items-center gap-1">
+                        <MapPin size={14} className="text-primary" />
+                        {exp.location}
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>
